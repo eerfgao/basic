@@ -1,0 +1,16 @@
+void FindCredit(int **);
+
+void main(void)
+{
+	int vals[] = { 7, 6, 5, -4, 3, 2, 1, 0 };
+	int *fp = vals;
+	FindCredit(&fp);
+	printf("%d\n", *fp);
+}
+
+void FindCredit(int ** fpp)
+{
+	while (**fpp != 0)
+	if (**fpp<0) break;
+	else (*fpp)++;
+}
